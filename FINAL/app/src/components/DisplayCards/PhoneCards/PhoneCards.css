@@ -1,0 +1,22 @@
+.items-define{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.item-define{
+    /* width:40%; */
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.phone-single-item{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination{
+    justify-content: center;
+}
+

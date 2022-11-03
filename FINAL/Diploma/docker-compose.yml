@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+    ms-sql-server:
+        image: mcr.microsoft.com/mssql/server:2019-latest
+        environment:
+            ACCEPT_EULA: "Y"
+            MSSQL_SA_PASSWORD: "Pa$$word2019"
+        ports:
+            - "1433:1433"
+    backend:
+        image: 1633c83d2fed
+        build: .
+        ports:
+            - "8080:80"
+        container_name: backend
+    frontend:
+        image: 7864c9c5e9d2
+        build: ../app
+        ports: 
+            - "3000:3000"
+        container_name: reactdiploma
+
